@@ -1,0 +1,65 @@
+﻿<main>
+    <h2>Angular 2 Social Network</h2>
+    <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1">Home</label>
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2">Friends</label>
+    <section id="content1">
+        <h2>Logged in as {{currentUser.firstName}}!</h2>
+        <h3>All registered users:</h3>
+        <p>
+            <a [routerLink]="['/login']">
+                <button type="button" class="btn btn-danger">Logout</button>
+            </a>
+        </p>
+        <div class="container">
+            <div class="well" *ngFor="let user of users">
+                <div class="media">
+                    <div class="img-div pull-left">
+                        <img src="http://placekitten.com/g/150/150" />
+                    </div>
+                    <div class="media-body zmpad">
+                        <div class="pull-right">({{user.firstName}} {{user.lastName}})</div>
+                        <p>{{user.username}}</p>
+                        <a (click)="followUser(user._id)">
+                            <button type="button" class="btn btn-success">Follow</button>
+                        </a>
+                        <a (click)="unfollowUser(user._id)">
+                            <button type="button" class="btn btn-warning">Unfollow</button>
+                        </a>
+                        <a (click)="deleteUser(user._id)">
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="content2">
+        <h2>Logged in as {{currentUser.firstName}}!</h2>
+        <h3>My friends:</h3>
+        <p>
+            <a [routerLink]="['/login']">
+                <button type="button" class="btn btn-danger">Logout</button>
+            </a>
+        </p>
+        <div class="container">
+            <div class="well" *ngFor="let friend of friends">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <div class="img-div">
+                            <img src="http://placekitten.com/g/150/150" />
+                        </div>
+                    </a>
+                    <div class="media-body">
+                        <div class="text-right">({{friend.firstName}} {{friend.lastName}})</div>
+                        <p>{{friend.username}}</p>
+                        <a (click)="unfollowUser(friend._id)">
+                            <button type="button" class="btn btn-warning">Unfollow</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

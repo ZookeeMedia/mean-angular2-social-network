@@ -1,0 +1,57 @@
+  body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+  }
+  
+  main {
+      flex: 1 0 auto;
+  }
+  
+  nav {
+  	background-color: green;
+  }
+  .nav-extended {
+      position: relative;
+      margin-bottom: 5rem;
+  }
+  
+  .zm-login-btn {
+      position: absolute;
+      right: 10px;
+      bottom: -30px;
+  }
+  
+  .zm-container {
+      min-height: 100vh;
+  }
+  
+  .collapsible-body {
+      padding-left: 10rem;
+  }
+  
+  .collapsible-body img {
+      position: absolute;
+      width: 84px;
+      height: 84px;
+      overflow: hidden;
+      left: 35px;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  
+  .collapsible li {
+      position: relative;
+  }
+  
+.page-footer{
+	background-color: #ccc;
+}
+
+  @media screen and (max-width: 990px) and (min-width: 520px) {
+      .zm-login-btn {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+      }
+  }

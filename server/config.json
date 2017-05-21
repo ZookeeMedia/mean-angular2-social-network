@@ -1,0 +1,5 @@
+﻿{
+    "connectionString": "mongodb://localhost:27017/mean-angular2-social-network",
+    "apiUrl": "http://localhost:4000",
+    "secret": "I HOPE THOUGHT RIVER EMPLOYS ME"
+}
